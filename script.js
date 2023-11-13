@@ -1,46 +1,49 @@
+/* Coloquei a mensagem  como pediram mas fiz uma alteração pois não tinha o nome do jogador 
+e na minha não adianta você dizer a quantidade de vitorias e o nivel sem saber o nome do 
+jogador.
+*/
 let jogador = "thebest";
 
-let result = subtration(300, 150)
+let sub;
 
 function subtration(victory, defeat) {
-    let sub = victory - defeat
-    console.log(sub)
-    return sub
+    sub = victory - defeat;
+    return sub;
 }
+
+let result = subtration(300, 195);
+
+let nivel;
 
 switch (true) {
 
-    case result <= 1000:
-        console.log("O Herói de nome " + jogador + " está no nível de Ferro");
+    case result <= 10:
+        nivel = "Ferro";
         break
 
-    case result <= 2000:
-        console.log("O Herói de nome " + jogador + " está no nível de Bronze");
+    case result <= 20:
+        nivel = "Bronze";
         break
 
-    case result <= 5000:
-        console.log("O Herói de nome " + jogador + " está no nível de Prata");
+    case result <= 50:
+        nivel = "Prata";
         break
 
-    case result <= 7000:
-        console.log("O Herói de nome " + jogador + " está no nível de Ouro");
+    case result <= 80:
+        nivel = "Ouro";
         break
 
-    case result <= 8000:
-        console.log("O Herói de nome " + jogador + " está no nível de Platina");
+    case result <= 90:
+        nivel = "Diamante"
         break
 
-    case result <= 9000:
-        console.log("O Herói de nome " + jogador + " está no nível de Ascendente");
-        break
-
-    case result <= 10000:
-        console.log("O Herói de nome " + jogador + " está no nível de Imortal");
+    case result <= 100:
+        nivel = "Lendário";
         break
     
-    case result > 10000:
-        console.log("O Herói de nome " + jogador + " está no nível de Radiante");
+    case result > 100:
+        nivel = "Imortal";
         break
 }
 
-console.log(result)
+console.log(`O Herói  ${jogador}  tem saldo de ${sub} está no nível de ${nivel}`);
